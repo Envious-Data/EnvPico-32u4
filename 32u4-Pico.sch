@@ -4,10 +4,10 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
-Title "RP2040 Minimal Design Example"
+Title ""
 Date "2020-12-18"
-Rev "REV1"
-Comp "Raspberry Pi (Trading) Ltd"
+Rev ""
+Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -218,8 +218,6 @@ Text Notes 13700 4450 0    197  ~ 39
 GPIOs
 Text Label 3850 8400 2    50   ~ 0
 XIN
-Text Label 3900 9000 2    50   ~ 0
-XOUT
 Wire Wire Line
 	2600 8400 3200 8400
 Wire Wire Line
@@ -417,12 +415,6 @@ F 3 "" H 3200 8100 50  0001 C CNN
 	1    3200 8100
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	3650 9000 3900 9000
-Text Notes 3450 8900 0    39   ~ 0
-Intentionally left floating
-Text Notes 1700 9250 0    50   ~ 0
-Pin1 on XO Oscillator also left floating so the chip is enabled\n(this is specified in their datasheet)
 Text GLabel 1100 2400 2    50   Input ~ 0
 GND
 Text GLabel 1100 2300 2    50   Input ~ 0
@@ -510,8 +502,6 @@ F 3 "~" H 12650 10250 50  0001 C CNN
 	1    12650 10250
 	1    0    0    -1  
 $EndComp
-Text Notes 1700 9350 0    50   ~ 0
-Use a 12mhz Seiko Oscilator, 3225-4Pin
 Text Notes 3200 8650 0    50   ~ 0
 Dont bother trying to use a crystal\nas it massively complicates this clock source setup
 Text Notes 600  750  0    50   ~ 0
@@ -582,39 +572,6 @@ Text Label 5600 5350 0    50   ~ 0
 USB_D-
 Wire Wire Line
 	6900 5350 6450 5350
-Text Label 9550 2050 0    50   ~ 0
-ADC_VREF
-Wire Wire Line
-	9250 2050 9250 2150
-Wire Wire Line
-	9250 2050 9550 2050
-Connection ~ 9250 2050
-Wire Wire Line
-	9250 1900 9250 2050
-Wire Wire Line
-	9250 1600 9250 1700
-$Comp
-L Device:R_Small R9
-U 1 1 61044B24
-P 9250 1800
-F 0 "R9" H 9309 1846 50  0000 L CNN
-F 1 "200ohm 0603" H 9309 1755 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 9250 1800 50  0001 C CNN
-F 3 "~" H 9250 1800 50  0001 C CNN
-	1    9250 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R10
-U 1 1 610441D8
-P 9250 2250
-F 0 "R10" H 9309 2296 50  0000 L CNN
-F 1 "1Ohm 0402" H 9309 2205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric" H 9250 2250 50  0001 C CNN
-F 3 "~" H 9250 2250 50  0001 C CNN
-	1    9250 2250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8850 2550 8850 2500
 Wire Wire Line
@@ -672,8 +629,6 @@ Connection ~ 8400 2500
 Wire Wire Line
 	7600 2500 8400 2500
 Connection ~ 7600 2500
-Wire Wire Line
-	7600 2450 7600 2500
 Wire Wire Line
 	7600 2500 7600 3100
 Wire Wire Line
@@ -746,7 +701,7 @@ L Device:R R4
 U 1 1 5EDE1624
 P 6300 5350
 F 0 "R4" V 6300 5400 50  0000 C CNN
-F 1 " 27Ohms 0402 Resistor" V 6200 5350 50  0000 C CNN
+F 1 "22Ohm 0402 Resistor" V 6200 5350 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" V 6230 5350 50  0001 C CNN
 F 3 "" H 6300 5350 50  0001 C CNN
 	1    6300 5350
@@ -759,15 +714,13 @@ L Device:R R3
 U 1 1 5EDE0881
 P 6400 5250
 F 0 "R3" V 6400 5300 50  0000 C CNN
-F 1 " 27Ohms  0402 Resistor" V 6500 5300 50  0000 C CNN
+F 1 " 22Ohm  0402 Resistor" V 6500 5300 50  0000 C CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" V 6330 5250 50  0001 C CNN
 F 3 "" H 6400 5250 50  0001 C CNN
 	1    6400 5250
 	0    -1   -1   0   
 $EndComp
-Text GLabel 7600 2450 0    39   Input ~ 0
-VSYS
-Text GLabel 9250 1600 0    39   Input ~ 0
+Text GLabel 7500 2350 0    39   Input ~ 0
 VSYS
 Text Label 6750 4450 2    50   ~ 0
 XIN
@@ -801,10 +754,6 @@ F 3 "" H 6850 5850 50  0001 C CNN
 	1    6850 5850
 	1    0    0    -1  
 $EndComp
-Text Notes 8100 3150 0    50   ~ 0
-Make sure C10 is close to pin 44 of RP2040
-Wire Wire Line
-	9250 2350 9250 2500
 Connection ~ 9250 2500
 Wire Wire Line
 	9250 2500 9250 2550
@@ -812,8 +761,8 @@ $Comp
 L Device:C C3
 U 1 1 6122812D
 P 6250 4850
-F 0 "C3" H 6365 4896 50  0000 L CNN
-F 1 "1uf 0402" H 6365 4805 50  0000 L CNN
+F 0 "C3" V 6300 4700 50  0000 L CNN
+F 1 "1uf 0402" V 6100 4550 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6288 4700 50  0001 C CNN
 F 3 "" H 6250 4850 50  0001 C CNN
 	1    6250 4850
@@ -1034,4 +983,63 @@ Wire Wire Line
 	8100 7050 8600 7050
 Text Label 8600 7050 2    50   ~ 0
 GPIO21
+$Comp
+L Device:R_Small R1
+U 1 1 610E95DF
+P 6700 3850
+F 0 "R1" H 6759 3896 50  0000 L CNN
+F 1 "10K 0402" H 6759 3805 50  0000 L CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" H 6700 3850 50  0001 C CNN
+F 3 "~" H 6700 3850 50  0001 C CNN
+	1    6700 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 6650 3700 0    39   Input ~ 0
+VSYS
+Wire Wire Line
+	6900 4250 6700 4250
+$Comp
+L Switch:SW_Push RSW1
+U 1 1 610FBDD2
+P 6200 4250
+F 0 "RSW1" H 6200 4535 50  0000 C CNN
+F 1 "SKRK" H 6200 4444 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_Push_SPST_NO_Alps_SKRK" H 6200 4450 50  0001 C CNN
+F 3 "~" H 6200 4450 50  0001 C CNN
+	1    6200 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 610FC4BB
+P 5950 4250
+F 0 "#PWR01" H 5950 4000 50  0001 C CNN
+F 1 "GND" V 5955 4122 50  0000 R CNN
+F 2 "" H 5950 4250 50  0001 C CNN
+F 3 "" H 5950 4250 50  0001 C CNN
+	1    5950 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5950 4250 6000 4250
+Wire Wire Line
+	6700 3950 6700 4250
+Connection ~ 6700 4250
+Wire Wire Line
+	6700 4250 6500 4250
+Wire Wire Line
+	6650 3700 6700 3700
+Wire Wire Line
+	6700 3700 6700 3750
+Text Label 6500 4200 2    50   ~ 0
+RUN
+Wire Wire Line
+	6500 4250 6500 4200
+Connection ~ 6500 4250
+Wire Wire Line
+	6500 4250 6400 4250
+Wire Wire Line
+	7500 2350 7600 2350
+Wire Wire Line
+	7600 2350 7600 2500
 $EndSCHEMATC
