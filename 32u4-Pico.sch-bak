@@ -630,8 +630,6 @@ Wire Wire Line
 	7600 2500 8400 2500
 Connection ~ 7600 2500
 Wire Wire Line
-	7600 2450 7600 2500
-Wire Wire Line
 	7600 2500 7600 3100
 Wire Wire Line
 	7600 3100 7600 3300
@@ -722,7 +720,7 @@ F 3 "" H 6400 5250 50  0001 C CNN
 	1    6400 5250
 	0    -1   -1   0   
 $EndComp
-Text GLabel 7600 2450 0    39   Input ~ 0
+Text GLabel 7500 2350 0    39   Input ~ 0
 VSYS
 Text Label 6750 4450 2    50   ~ 0
 XIN
@@ -1040,4 +1038,8 @@ Wire Wire Line
 Connection ~ 6500 4250
 Wire Wire Line
 	6500 4250 6400 4250
+Wire Wire Line
+	7500 2350 7600 2350
+Wire Wire Line
+	7600 2350 7600 2500
 $EndSCHEMATC

@@ -549,7 +549,7 @@ Text Label 1900 1750 0    39   ~ 0
 VBUS
 Wire Wire Line
 	2850 1750 3150 1750
-Text GLabel 14550 4800 0    39   Input ~ 0
+Text GLabel 14550 4800 0    47   Input ~ 0
 VSYS
 Wire Wire Line
 	3150 1650 3150 1750
