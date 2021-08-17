@@ -216,10 +216,6 @@ Text Notes 1550 1100 0    197  ~ 39
 USB/POWER
 Text Notes 13700 4450 0    197  ~ 39
 GPIOs
-Text Label 3850 8400 2    50   ~ 0
-XIN
-Wire Wire Line
-	2600 8400 3200 8400
 Wire Wire Line
 	13550 6600 13050 6600
 Wire Wire Line
@@ -357,64 +353,6 @@ F 3 "" H 14600 6400 50  0001 C CNN
 	1    14600 6400
 	0    1    1    0   
 $EndComp
-$Comp
-L Oscillator:XO32 X1
-U 1 1 60894744
-P 2600 8700
-F 0 "X1" V 2250 8550 50  0000 L CNN
-F 1 "8Mhz 3225" V 2350 8450 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_SeikoEpson_TSX3225-4Pin_3.2x2.5mm" H 3300 8350 50  0001 C CNN
-F 3 "" H 2500 8700 50  0001 C CNN
-	1    2600 8700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0105
-U 1 1 608B9527
-P 2900 8700
-F 0 "#PWR0105" H 2900 8450 50  0001 C CNN
-F 1 "GND" V 2905 8572 50  0000 R CNN
-F 2 "" H 2900 8700 50  0001 C CNN
-F 3 "" H 2900 8700 50  0001 C CNN
-	1    2900 8700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3.3V #PWR0106
-U 1 1 608B9D1F
-P 2300 8700
-F 0 "#PWR0106" H 2300 8550 50  0001 C CNN
-F 1 "+3.3V" V 2315 8828 50  0000 L CNN
-F 2 "" H 2300 8700 50  0001 C CNN
-F 3 "" H 2300 8700 50  0001 C CNN
-	1    2300 8700
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:C C2
-U 1 1 5ED96B87
-P 3200 8250
-F 0 "C2" H 3315 8296 50  0000 L CNN
-F 1 "15pf 0402" H 3315 8205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 3238 8100 50  0001 C CNN
-F 3 "" H 3200 8250 50  0001 C CNN
-	1    3200 8250
-	1    0    0    -1  
-$EndComp
-Connection ~ 3200 8400
-Wire Wire Line
-	3200 8400 3850 8400
-$Comp
-L power:GND #PWR0107
-U 1 1 6097CBA8
-P 3200 8100
-F 0 "#PWR0107" H 3200 7850 50  0001 C CNN
-F 1 "GND" H 3205 7927 50  0000 C CNN
-F 2 "" H 3200 8100 50  0001 C CNN
-F 3 "" H 3200 8100 50  0001 C CNN
-	1    3200 8100
-	-1   0    0    1   
-$EndComp
 Text GLabel 1100 2400 2    50   Input ~ 0
 GND
 Text GLabel 1100 2300 2    50   Input ~ 0
@@ -502,8 +440,6 @@ F 3 "~" H 12650 10250 50  0001 C CNN
 	1    12650 10250
 	1    0    0    -1  
 $EndComp
-Text Notes 3200 8650 0    50   ~ 0
-Dont bother trying to use a crystal\nas it massively complicates this clock source setup
 Text Notes 600  750  0    50   ~ 0
 2x 5.1K Resistors on the CC pins will = 5V@1.5A\nthis is the recomended default config for type-c
 Wire Wire Line
@@ -722,10 +658,6 @@ F 3 "" H 6400 5250 50  0001 C CNN
 $EndComp
 Text GLabel 7500 2350 0    39   Input ~ 0
 VSYS
-Text Label 6750 4450 2    50   ~ 0
-XIN
-Wire Wire Line
-	6750 4450 6900 4450
 Text GLabel 6900 5050 0    39   Input ~ 0
 VBUS
 $Comp
@@ -837,39 +769,6 @@ Text Label 8600 5850 2    50   ~ 0
 GPIO11
 Text Label 8600 5950 2    50   ~ 0
 GPIO10
-$Comp
-L Regulator_Linear:LF33_TO220 U2
-U 1 1 61280791
-P 1100 8700
-F 0 "U2" H 1100 8942 50  0000 C CNN
-F 1 "3.3VO SOT-23" H 1100 8851 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 1100 8925 50  0001 C CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/c4/0e/7e/2a/be/bc/4c/bd/CD00000546.pdf/files/CD00000546.pdf/jcr:content/translations/en.CD00000546.pdf" H 1100 8650 50  0001 C CNN
-	1    1100 8700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3.3V #PWR0111
-U 1 1 612816FB
-P 1400 8700
-F 0 "#PWR0111" H 1400 8550 50  0001 C CNN
-F 1 "+3.3V" V 1415 8828 50  0000 L CNN
-F 2 "" H 1400 8700 50  0001 C CNN
-F 3 "" H 1400 8700 50  0001 C CNN
-	1    1400 8700
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR0112
-U 1 1 6128B908
-P 1100 9000
-F 0 "#PWR0112" H 1100 8750 50  0001 C CNN
-F 1 "GND" H 1100 8800 50  0000 C CNN
-F 2 "" H 1100 9000 50  0001 C CNN
-F 3 "" H 1100 9000 50  0001 C CNN
-	1    1100 9000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8100 5650 8600 5650
 Wire Wire Line
@@ -941,8 +840,6 @@ F 3 "" H 9900 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 9900 2950
-Text GLabel 800  8700 0    50   Input ~ 0
-VSYS
 Wire Wire Line
 	8100 4850 8600 4850
 Wire Wire Line
@@ -1042,4 +939,102 @@ Wire Wire Line
 	7500 2350 7600 2350
 Wire Wire Line
 	7600 2350 7600 2500
+Text GLabel 6900 4450 0    50   Input ~ 0
+XTAL1
+Text GLabel 6900 4650 0    50   Input ~ 0
+XTAL2
+Text GLabel 1600 8800 0    50   Input ~ 0
+XTAL1
+Text GLabel 1600 9000 0    50   Input ~ 0
+XTAL2
+$Comp
+L Device:Crystal_GND24 Y1
+U 1 1 611E12C9
+P 1900 8900
+F 0 "Y1" V 1900 8850 50  0000 L CNN
+F 1 "8MHz 3225_4p crystal" V 1950 9100 20  0000 L CNN
+F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 1900 8900 50  0001 C CNN
+F 3 "~" H 1900 8900 50  0001 C CNN
+	1    1900 8900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1600 9000 1650 9000
+Wire Wire Line
+	1650 9000 1650 9100
+Wire Wire Line
+	1650 9100 1900 9100
+Wire Wire Line
+	1600 8800 1650 8800
+Wire Wire Line
+	1650 8800 1650 8700
+Wire Wire Line
+	1650 8700 1900 8700
+Wire Wire Line
+	1900 8750 1900 8700
+Wire Wire Line
+	1900 9050 1900 9100
+$Comp
+L power:GND #PWR02
+U 1 1 611FE0D7
+P 1700 8900
+F 0 "#PWR02" H 1700 8650 50  0001 C CNN
+F 1 "GND" V 1705 8772 50  0000 R CNN
+F 2 "" H 1700 8900 50  0001 C CNN
+F 3 "" H 1700 8900 50  0001 C CNN
+	1    1700 8900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 611FFE4A
+P 2200 8700
+F 0 "C2" V 1971 8700 50  0000 C CNN
+F 1 "22pF 0402" V 2062 8700 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2200 8700 50  0001 C CNN
+F 3 "~" H 2200 8700 50  0001 C CNN
+	1    2200 8700
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 612008C3
+P 2200 9100
+F 0 "C7" V 2300 9100 50  0000 C CNN
+F 1 "22pF 0402" V 2400 9100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 2200 9100 50  0001 C CNN
+F 3 "~" H 2200 9100 50  0001 C CNN
+	1    2200 9100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1900 8700 2100 8700
+Connection ~ 1900 8700
+Wire Wire Line
+	1900 9100 2100 9100
+Connection ~ 1900 9100
+Wire Wire Line
+	2300 9100 2450 9100
+Wire Wire Line
+	2450 9100 2450 8900
+Wire Wire Line
+	2450 8700 2300 8700
+Wire Wire Line
+	2100 8900 2450 8900
+Connection ~ 2450 8900
+Wire Wire Line
+	2450 8900 2450 8700
+$Comp
+L power:GND #PWR05
+U 1 1 61224AC9
+P 2550 8900
+F 0 "#PWR05" H 2550 8650 50  0001 C CNN
+F 1 "GND" V 2555 8772 50  0000 R CNN
+F 2 "" H 2550 8900 50  0001 C CNN
+F 3 "" H 2550 8900 50  0001 C CNN
+	1    2550 8900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2450 8900 2550 8900
 $EndSCHEMATC
