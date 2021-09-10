@@ -928,7 +928,7 @@ Wire Wire Line
 	6650 3700 6700 3700
 Wire Wire Line
 	6700 3700 6700 3750
-Text Label 6500 4200 2    50   ~ 0
+Text Label 6500 4350 2    50   ~ 0
 RUN
 Wire Wire Line
 	6500 4250 6500 4200
@@ -1037,4 +1037,46 @@ F 3 "" H 2550 8900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2450 8900 2550 8900
+Text GLabel 8600 4550 2    50   Input ~ 0
+GPIO4-miso
+Text GLabel 8600 4450 2    50   Input ~ 0
+GPIO3-mosi
+Text GLabel 8600 4350 2    50   Input ~ 0
+GPIO2-SCK
+Text GLabel 6500 4200 1    39   Input ~ 0
+RUN-RESET
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even ISP
+U 1 1 613C4220
+P 14100 7400
+F 0 "ISP" H 14150 7717 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 14150 7626 50  0000 C CNN
+F 2 "" H 14100 7400 50  0001 C CNN
+F 3 "~" H 14100 7400 50  0001 C CNN
+	1    14100 7400
+	1    0    0    -1  
+$EndComp
+Text GLabel 13900 7400 0    50   Input ~ 0
+GPIO2-SCK
+Text GLabel 14400 7400 2    50   Input ~ 0
+GPIO3-mosi
+Text GLabel 13900 7300 0    50   Input ~ 0
+GPIO4-miso
+Text GLabel 13900 7500 0    47   Input ~ 0
+RUN-RESET
+$Comp
+L power:GND #PWR?
+U 1 1 613C70D0
+P 14400 7500
+F 0 "#PWR?" H 14400 7250 50  0001 C CNN
+F 1 "GND" V 14405 7372 50  0000 R CNN
+F 2 "" H 14400 7500 50  0001 C CNN
+F 3 "" H 14400 7500 50  0001 C CNN
+	1    14400 7500
+	0    -1   -1   0   
+$EndComp
+Text GLabel 14400 7300 2    47   Input ~ 0
+VSYS
+Wire Wire Line
+	6500 4350 6500 4250
 $EndSCHEMATC
