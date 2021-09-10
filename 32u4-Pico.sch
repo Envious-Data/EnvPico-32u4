@@ -1045,38 +1045,38 @@ Text GLabel 8600 4350 2    50   Input ~ 0
 GPIO2-SCK
 Text GLabel 6500 4200 1    39   Input ~ 0
 RUN-RESET
-$Comp
-L Connector_Generic:Conn_02x03_Odd_Even ISP
-U 1 1 613C4220
-P 14100 7400
-F 0 "ISP" H 14150 7717 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 14150 7626 50  0000 C CNN
-F 2 "" H 14100 7400 50  0001 C CNN
-F 3 "~" H 14100 7400 50  0001 C CNN
-	1    14100 7400
-	1    0    0    -1  
-$EndComp
-Text GLabel 13900 7400 0    50   Input ~ 0
+Text GLabel 13750 8100 3    50   Input ~ 0
 GPIO2-SCK
-Text GLabel 14400 7400 2    50   Input ~ 0
+Text GLabel 13850 8100 3    50   Input ~ 0
 GPIO3-mosi
-Text GLabel 13900 7300 0    50   Input ~ 0
+Text GLabel 13950 8100 3    50   Input ~ 0
 GPIO4-miso
-Text GLabel 13900 7500 0    47   Input ~ 0
+Text GLabel 13650 8100 3    47   Input ~ 0
 RUN-RESET
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0105
 U 1 1 613C70D0
-P 14400 7500
-F 0 "#PWR?" H 14400 7250 50  0001 C CNN
-F 1 "GND" V 14405 7372 50  0000 R CNN
-F 2 "" H 14400 7500 50  0001 C CNN
-F 3 "" H 14400 7500 50  0001 C CNN
-	1    14400 7500
-	0    -1   -1   0   
+P 13350 7600
+F 0 "#PWR0105" H 13350 7350 50  0001 C CNN
+F 1 "GND" V 13355 7472 50  0000 R CNN
+F 2 "" H 13350 7600 50  0001 C CNN
+F 3 "" H 13350 7600 50  0001 C CNN
+	1    13350 7600
+	0    1    1    0   
 $EndComp
-Text GLabel 14400 7300 2    47   Input ~ 0
+Text GLabel 14250 7600 2    47   Input ~ 0
 VSYS
 Wire Wire Line
 	6500 4350 6500 4250
+$Comp
+L Connector:AVR-ISP-6 ISP1
+U 1 1 613C5EE0
+P 13750 7700
+F 0 "ISP1" V 13283 7750 50  0000 C CNN
+F 1 "AVR-ISP-6" V 13374 7750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 13500 7750 50  0001 C CNN
+F 3 " ~" H 12475 7150 50  0001 C CNN
+	1    13750 7700
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
