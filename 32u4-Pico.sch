@@ -1079,4 +1079,30 @@ F 3 " ~" H 12475 7150 50  0001 C CNN
 	1    13750 7700
 	0    1    1    0   
 $EndComp
+Text GLabel 1100 3400 0    47   Input ~ 0
+USB_D-
+Text GLabel 1100 3250 0    47   Input ~ 0
+USB_D+
+$Comp
+L Connector:TestPoint TP1
+U 1 1 61CFC7C5
+P 1100 3250
+F 0 "TP1" V 1054 3438 50  0000 L CNN
+F 1 "TestPoint" V 1145 3438 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 1300 3250 50  0001 C CNN
+F 3 "~" H 1300 3250 50  0001 C CNN
+	1    1100 3250
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 61CFD722
+P 1100 3400
+F 0 "TP2" V 1054 3588 50  0000 L CNN
+F 1 "TestPoint" V 1145 3588 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_2.0x2.0mm" H 1300 3400 50  0001 C CNN
+F 3 "~" H 1300 3400 50  0001 C CNN
+	1    1100 3400
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
