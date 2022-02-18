@@ -27,3 +27,4 @@ _autosave-*
 #forgot these bits
 !32u4-Pico_cpl_jlc.csv
 !32u4-Pico_bom_jlc.csv
+32u4-Pico-backups/*.zip
